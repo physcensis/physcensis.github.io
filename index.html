@@ -1,0 +1,1009 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="bootstrap.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+<!---
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+--->
+<script src="load-mathjax.js" async></script>
+
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- mirror: F0%9F%AA%9E&lt -->
+<link rel="stylesheet" href="PHYSCENSIS_files/bootstrap.min.css">
+<link rel="stylesheet" href="PHYSCENSIS_files/app.css">
+<link rel="stylesheet" href="PHYSCENSIS_files/index.css">
+<link rel="stylesheet" href="PHYSCENSIS_files/select.css">
+<script src="PHYSCENSIS_files/bootstrap.min.js"></script>
+<script src="PHYSCENSIS_files/video_comparison.js"></script>
+<script src="PHYSCENSIS_files/select.js"></script>
+<script src="PHYSCENSIS_files/index.js"></script>
+<script src="resources/glide.min.js"></script>
+
+
+<style type="text/css">
+body {
+    font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 980px){
+    body {
+        width: 1080px;
+    }
+}
+
+
+h1 {
+    font-weight:300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+a:link,a:visited {
+    color: #5364cc;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+}
+h1 {
+    text-align: center;
+}
+h2,h3 {
+    text-align: left;
+}
+
+h1 {
+    font-size: 43px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+h3 {
+    font-weight: 600;
+    margin: 16px 0px 4px 0px;
+}
+
+.paper-title {
+    padding: 1px 0px 1px 0px;
+}
+
+.abstract {
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  width: 80%; /* Set the width to 80% of the container */
+  padding-bottom: 56.25%; /* This gives the 16:9 aspect ratio (9/16 = 0.5625 or 56.25%) */
+  height: 0; /* Set height to zero to allow padding to control height */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Set iframe width to fill the container */
+  height: 80%; /* Set iframe height to fill the container */
+  border-radius: 15px;
+}
+
+.abstract h1 {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+
+.abstract h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+
+.abstract p {
+  text-align: justify;
+  font-size: 18px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+section {
+    margin: 32px 0px 32px 0px;
+    text-align: justify;
+    clear: both;
+}
+.col-5 {
+     width: 20%;
+     float: left;
+}
+
+.move-down {
+    margin-top:1.2cm;
+}
+
+.col-4 {
+     width: 25%;
+     float: left;
+}
+.col-3 {
+     width: 33%;
+     float: left;
+}
+.col-2 {
+     width: 50%;
+     float: left;
+}
+.col-1 {
+     width: 100%;
+     float: left;
+}
+
+.author-row, .affil-row {
+    font-size: 22px;
+}
+
+.author-row-new { 
+    text-align: center; 
+}
+
+.author-row-new a {
+    display: inline-block;
+    font-size: 22px;
+    padding: 4px;
+}
+
+.author-row-new div {
+  display: inline-block;
+  font-size: 22px;
+  padding: 4px;
+}
+
+.author-row-new sup {
+    color: #313436;
+    font-size: 18px;
+}
+
+.affiliations-new {
+    font-size: 10px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.link-row {
+  text-align: center;
+  color: #313436;
+}
+
+.link-row a {
+    display: inline-block;
+    font-size: 22px;
+    padding: 4px;
+    color: #EEEEEE;
+}
+
+.row {
+    margin: 16px 0px 16px 0px;
+}
+.authors {
+    font-size: 26px;
+}
+.affiliatons {
+    font-size: 10px;
+}
+.affil-row {
+    margin-top: 18px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+}
+.caption {
+    font-size: 16px;
+    color: #666;
+    margin-top: 4px;
+    margin-bottom: 10px;
+	text-align: left;
+}
+
+
+video {
+    display: block;
+    margin: auto;
+}
+
+audio {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+figure {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex: 0 0 33%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.flex-item-small {
+  flex: 0 0 25%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.flex-item-19 {
+  flex: 0 0 19%;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-item-19 p {
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.flex-item-27 {
+  flex: 0 0 27%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.paper-btn-coming-soon {
+    position: relative; 
+    top: 0;
+    left: 0;
+}
+
+.coming-soon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+.center {
+  margin-left: 10.0%;
+  margin-right: 10.0%;
+}
+
+.paper-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #5364cc;
+  color: white !important;
+  font-size: 20px;
+  width: 100px;
+  font-weight: 600;
+}
+
+.paper-btn-tapestry {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #5364cc;
+  color: white !important;
+  font-size: 20px;
+  width: 200px;
+  font-weight: 600;
+}
+
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+
+.paper-btn:hover {
+    opacity: 0.85;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.venue {
+    font-size: 23px;
+}
+
+.topnav {
+    background-color: #EEEEEE;
+    overflow: hidden;
+}
+
+.topnav div {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.topnav a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav img {
+    padding: 2px 0px;
+    width: 100%;
+    margin: 0.2em 0px 0.3em 0px;
+    vertical-align: middle;
+}
+
+pre {
+    font-size: 0.9em;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    background-color: rgb(235, 235, 235);
+    overflow-x: auto;
+}
+
+.download-thumb {
+    display: flex;
+}
+
+@media only screen and (max-width: 620px) {
+    .download-thumb {
+        display: none;
+    }
+}
+
+.paper-stuff {
+    width: 50%;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 620px) {
+    .paper-stuff {
+        width: 100%;
+    }
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  text-align: center;
+  float: left;
+  width: 16.666%;
+  padding: 5px;
+}
+.column3 {
+  text-align: center;
+  float: left;
+  width: 33.333%;
+  padding: 5px;
+}
+.column4 {
+  text-align: center;
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.column5 {
+  text-align: center;
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+.column10 {
+  text-align: center;
+  float: left;
+  width: 10%;
+  padding: 5px;
+}
+.border-right {
+    border-right: 1px solid black;
+}
+.border-bottom{
+    border-bottom: 1px solid black;
+}
+
+
+.row-center {
+    margin: 16px 0px 16px 0px;
+    text-align: center;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+
+.link-block a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+
+
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .column3 {
+    width: 100%;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="bootstrap-grid.css">
+
+<script type="text/javascript" src="../js/hidebib.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+    <head>
+        <title> PhyScensis</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:description" content="PhyScensis: Physics-Augmented LLM Agents for Complex Physical Scene Generation"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="PhyScensis: Physics-Augmented LLM Agents for Complex Physical Scene Generation">
+        <meta name="twitter:image" content="">
+
+        <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+        <!-- <link rel="stylesheet" href="./static/css/bulma.min.css"> -->
+        <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="./static/css/index.css">
+        <link rel="icon" href="image/logo.ico" type="image/x-icon">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+        <script src="./static/js/bulma-carousel.min.js"></script>
+        <script src="./static/js/bulma-slider.min.js"></script>
+        <script src="./static/js/index.js"></script>
+
+
+    </head>
+
+ <body>
+
+<div class="container" style="align-items: center;">
+    <div class="paper-title">
+    <h1> 
+      <b>PhyScensis</b>: Physics-Augmented LLM Agents for Complex Physical Scene Generation
+    </h1>
+        <h2 style="text-align: center;">
+            Anonymous Submission
+        </h2>
+    </div>
+
+
+
+
+    
+
+    <div class="abstract" style="align-items:center; width:80%; margin: 0 auto;">
+      <h1>Abstract</h1>
+      <p>
+      Automatically generating interactive 3D environments is crucial for scaling up robotic data collection in simulation. While prior work has primarily focused on 3D asset placement, it often overlooks the physical relationships between objects (e.g., contact, support, balance, and containment), which are essential for creating complex and realistic manipulation scenarios such as tabletop arrangements, shelf organization, or box packing. Compared to classical 3D scene generation, producing complex physical scenes introduces additional challenges: (a) higher object density and complexity (e.g., a small shelf may hold dozens of books), (b) richer supporting relationships and compact spatial layouts, and (c) the need to accurately model both spatial placement and physical properties.
+      To address these challenges, we propose PhyScensis, an LLM agent-based framework powered by a physics engine, to generate physically accurate 3D scenes with high complexity.
+      Specifically, our framework consists of three main components: an LLM agent iteratively proposes assets with spatial and physical predicates; a solver, equipped with a physics engine, realizes these predicates into a 3D scene; and feedback from the solver informs the agent to refine and enrich the configuration. 
+      Moreover, our framework preserves strong controllability over fine-grained textual descriptions and numerical parameters (e.g., relative positions, scene stability), enabled through probabilistic programming for stability and a complementary heuristic that jointly regulates stability and spatial relations.
+      Experimental results show that our method outperforms prior approaches in scene complexity, visual quality, and physical accuracy, offering a unified pipeline for generating complex physical scenes for robotic manipulation.      <hr>
+      </p>
+    </div>
+
+
+
+    <div class="abstract">
+      <h1>Methodology Overview</h1>
+      
+
+      <p>
+
+        <video width="100%" style="padding-bottom: 20px;" autoplay muted loop>
+          <source src="video/pipeline.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+          Our framework consists of three components: <br>
+
+          (a) an <b>LLM agent</b> that takes a user prompt and generates spatial and physical predicates, along with object descriptions for retrieval. <br>
+
+          (b) a <b>solver</b> that computes the final scene using a physics engine for physical predicates and a sample-based constraint solver for spatial predicates. <br>
+
+          (c) a <b>feedback system</b> that reports success or diagnoses failure, allowing the LLM agent to iteratively refine and regenerate predicates.
+      </p>
+        <hr>
+      </p>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="abstract">
+      <h1>More Qualitative Results</h1>
+    </div>
+
+
+    <hr>
+    <h2>
+        Scene Generation for a Given Prompt
+    </h2>
+    <div>
+        For a given prompt, PhyScensis can generate non-repeating placements that are diverse and complex. 
+    </div>
+
+    <div class="flex-row">
+        <div class="flex-container">
+          <div class="flex-item-19">
+            <p>
+              The working desk of a computer science PhD student.
+            </p>
+          </div>
+          <div class="flex-item-27">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/00.png" alt="Qualitative result 0">
+            </figure>
+          </div>
+          <div class="flex-item-27">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/01.png" alt="Qualitative result 1">
+            </figure>
+          </div>
+          <div class="flex-item-27">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/02.png" alt="Qualitative result 2">
+            </figure>
+          </div>
+          <div class="flex-item-19">
+            <p>
+              A clustered but organized dining table for 4 people.
+            </p>
+          </div>
+          <div class="flex-item-27">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/03.png" alt="Qualitative result 3">
+            </figure>
+          </div>
+          <div class="flex-item-27">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/04.png" alt="Qualitative result 4">
+            </figure>
+          </div>
+          <div class="flex-item-27">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/05.png" alt="Qualitative result 5">
+            </figure>
+          </div>
+          <div class="flex-item-19">
+            <p>
+              A messy dining table for 4 people.
+            </p>
+          </div>
+          <div class="flex-item-27">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/06.png" alt="Qualitative result 6">
+            </figure>
+          </div>
+            <div class="flex-item-27">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/07.png" alt="Qualitative result 7">
+            </figure>
+          </div>
+            <div class="flex-item-27">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/08.png" alt="Qualitative result 8">
+            </figure>
+          </div>
+        </div>
+      </div>
+
+
+    <hr>
+    <h2>
+        Diverse Scene Generation
+    </h2>
+    <div>
+        PhyScensis can generate diverse scenes due to its open-vocabulary nature.
+    </div>
+
+    <div class="flex-row">
+        <div class="flex-container">
+          <div class="flex-item">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/09.png" alt="Qualitative result 0">
+            </figure>
+            An explorer’s writing table with a compass, sketches, and an old map spread out.
+          </div>
+          <div class="flex-item">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/10.png" alt="Qualitative result 1">
+            </figure>
+            A wooden table with fruits, a candle, and old books arranged in a painterly still-life composition.
+          </div>
+          <div class="flex-item">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/11.png" alt="Qualitative result 2">
+            </figure>
+            A table with maps, postcards, foreign coins, and a globe—suggesting travel memories.
+          </div>
+          <div class="flex-item">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/12.png" alt="Qualitative result 3">
+            </figure>
+            A cozy holiday table with a centerpiece, ribbons, candles, and festive details.
+          </div>
+          <div class="flex-item">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/13.png" alt="Qualitative result 4">
+            </figure>
+            A messy breakfast table with food, drinks, and a phone left on the side.
+          </div>
+          <div class="flex-item">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/qualitative/14.png" alt="Qualitative result 5">
+            </figure>
+            A tidy modern desk with a laptop, a plant, headphones, and sticky notes.
+          </div>
+        </div>
+      </div>
+
+
+    
+      <hr>
+    <h2>
+        Iterative Scene Generation
+    </h2>
+    <div>
+        With the agentic framework, PhyScensis can iteratively generate complex scenes with rich physical interactions.<br>
+    </div>
+
+    <div class="flex-row" style="margin-top: 20px;">
+      <h3 style="text-align: center; font-size: 20px; font-weight: 500; margin-bottom: -10px; color: #333;">
+        A basket full of randomly placed boxes and cans.
+      </h3>
+        <div class="flex-container">
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/0.png" alt="Qualitative result 0">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/1.png" alt="Qualitative result 1">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/2.png" alt="Qualitative result 2">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/3.png" alt="Qualitative result 3">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/4.png" alt="Qualitative result 4">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/5.png" alt="Qualitative result 5">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/6.png" alt="Qualitative result 6">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/7.png" alt="Qualitative result 7">
+            </figure>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flex-row" style="margin-top: 20px;">
+      <h3 style="text-align: center; font-size: 20px; font-weight: 500; margin-bottom: -10px; color: #333;">
+        A basket full of randomly placed boxes and cans.
+      </h3>
+        <div class="flex-container">
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/8.png" alt="Qualitative result 0">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/9.png" alt="Qualitative result 1">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/10.png" alt="Qualitative result 2">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/11.png" alt="Qualitative result 3">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/12.png" alt="Qualitative result 4">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/13.png" alt="Qualitative result 5">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/14.png" alt="Qualitative result 6">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/iterative/15.png" alt="Qualitative result 7">
+            </figure>
+          </div>
+        </div>
+      </div>
+
+
+
+    <hr>
+    <h2>
+      Visualization of the Physical Predicates
+    </h2>
+    <div class="flex-row">
+        <div class="flex-container">
+          <div class="flex-item">
+            <figure>
+              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+                <source src="video/demos/method1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              The solver for PLACE-IN predicate.
+            </figure>
+          </div>
+          <div class="flex-item">
+            <figure>
+              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+                <source src="video/demos/method2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              The grid-based search for PLACE-ON and PLACE-ANYWHERE predicates.
+            </figure>
+          </div>
+          <div class="flex-item">
+            <figure>
+              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+                <source src="video/demos/method3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              Visualization of the simulation process and iterative generation.
+            </figure>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    <hr>
+    <h2>
+        Examples of Our Generated Manipulation Data
+    </h2>
+    <div>
+        With our generated scene, we implement a manipulation task generation pipeline to generate diverse manipulation tasks and trajectories, which are used to train the manipulation policy mentioned in the paper.
+    </div>
+
+    <div class="flex-row">
+        <div class="flex-container">
+          <div class="flex-item">
+            <figure>
+              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+                <source src="video/manipulation_compressed/1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="flex-item">
+            <figure>
+              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+                <source src="video/manipulation_compressed/2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="flex-item">
+            <figure>
+              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+                <source src="video/manipulation_compressed/3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="flex-item">
+            <figure>
+              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+                <source src="video/manipulation_compressed/4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="flex-item">
+            <figure>
+              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+                <source src="video/manipulation_compressed/5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+          <div class="flex-item">
+            <figure>
+              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+                <source src="video/manipulation_compressed/6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+            <div class="flex-item">
+            <figure>
+              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+                <source src="video/manipulation_compressed/7.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+            <div class="flex-item">
+            <figure>
+              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+                <source src="video/manipulation_compressed/8.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+            <div class="flex-item">
+            <figure>
+              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+                <source src="video/manipulation_compressed/9.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+<hr>
+
+    
+
+
+</div>
+</body>
+</html>
