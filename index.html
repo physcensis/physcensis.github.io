@@ -316,6 +316,18 @@ figure {
   box-sizing: border-box;
 }
 
+.flex-item-60 {
+  flex: 0 0 60%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.flex-item-40 {
+  flex: 0 0 40%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
 .paper-btn-coming-soon {
     position: relative; 
     top: 0;
@@ -639,8 +651,51 @@ pre {
 
 
     <div class="abstract">
-      <h1>More Qualitative Results</h1>
+      <h1>Qualitative Results</h1>
     </div>
+
+
+    <hr>
+    <h2>
+        Strong Controllability over Textual Descriptions
+    </h2>
+    <div>
+        PhyScensis allows users to specify detailed textual descriptions of objects and their spatial relationships, enabling the generation of scenes that closely match user intent.
+    </div>
+
+    <div class="flex-row">
+        <div class="flex-container">
+          <div class="flex-item-60" style="display: flex; align-items: center;">
+            <p style="font-size: 18px; line-height: 1.4; margin: 0;">
+              3 stacks of books, each with 3-4 books where the books in each stack are visibly different from each other but all have roughly the same color within each stack.
+            </p>
+          </div>
+          <div class="flex-item-40">
+            <figure>
+              <img class="centered img-fluid" width="80%" src="image/text_control/book.png" alt="Qualitative result 0">
+            </figure>
+          </div>
+          <div class="flex-item-60" style="display: flex; align-items: center;">
+            <p style="font-size: 16px; line-height: 1.4; margin: 0;">
+              Layer 1: Place 1 red toolbox, 1 orange toolbox, and 3 yellow toolbox on the shelf. Another blue toolbox should be place on the orange toolbox. 
+              The red one should be placed in the middle of the shelf and the orange one should be on the right. 
+              The three yellow toolbox should be placed in an organized manner, align in x axis, and placed to the left most of the table.
+              <br><br>
+              Layer 2: Place 3 drills in the middle, aligned, facing front. To the left is a middle-size blue motor and to the right is 2 small black motors. 
+              At last, place 1 wrench and 2 pliers randomly.
+              <br><br>
+              Layer 3: Place a large electric motor in the right-back part of the shelf. Then place 2 hand saw, 3 wrench and 3 hammer randomly in the remaining place.
+              <br><br>
+              Layer 4: Place a blacksmith jaw with random rotation. Then place a stack of 8 circular saw blade on the right of the shelf. In the middle is a angle grinder, facing front. Near it is a stack of 6 grinder chain discs.
+            </p>
+          </div>
+          <div class="flex-item-40">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/text_control/shelf.png" alt="Qualitative result 0">
+            </figure>
+          </div>
+      </div>
+      </div>
 
 
     <hr>
@@ -765,6 +820,40 @@ pre {
           </div>
         </div>
       </div>
+    
+
+    <hr>
+    <h2>
+        Strong Adaptability
+    </h2>
+    <div>
+        PhyScensis is adaptable to different placement scenarios, such as tabletop, box, kitchen counter, and ground.
+    </div>
+
+    <div class="flex-row" style="margin-top: 20px;">
+        <div class="flex-container">
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/adaptable/dining_ours.png" alt="Qualitative result 0">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/adaptable/box_book_ours.png" alt="Qualitative result 1">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/adaptable/kitchen_ours.png" alt="Qualitative result 2">
+            </figure>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/adaptable/ground_ours.png" alt="Qualitative result 3">
+            </figure>
+          </div>
+        </div>
+      </div>
 
 
     
@@ -776,7 +865,7 @@ pre {
         With the agentic framework, PhyScensis can iteratively generate complex scenes with rich physical interactions.<br>
     </div>
 
-    <div class="flex-row" style="margin-top: 20px;">
+    <div class="flex-row" style="margin-top: 15px;">
       <h3 style="text-align: center; font-size: 20px; font-weight: 500; margin-bottom: -10px; color: #333;">
         A basket full of randomly placed boxes and cans.
       </h3>
@@ -825,7 +914,7 @@ pre {
       </div>
 
 
-      <div class="flex-row" style="margin-top: 20px;">
+      <div class="flex-row" style="margin-top: -10px;">
       <h3 style="text-align: center; font-size: 20px; font-weight: 500; margin-bottom: -10px; color: #333;">
         A basket full of randomly placed boxes and cans.
       </h3>
@@ -874,6 +963,42 @@ pre {
       </div>
 
 
+    <hr>
+    <h2>
+        Stability Control with Probabilistic Programming
+    </h2>
+    <div>
+        With the physics engine, we can estimate the stability of the objects and optimize the object's physical properties towards unstable edge cases.
+    </div>
+    <div class="flex-row" style="margin-top: -10px;">
+        <div class="flex-container">
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/unstable/0.png" alt="Qualitative result 0">
+            </figure>
+            <div style="text-align: center; margin-top: -5px;">stability score: 0.71</div>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/unstable/2.png" alt="Qualitative result 1">
+            </figure>
+            <div style="text-align: center; margin-top: -5px;">stability score: 0.12</div>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/unstable/3.png" alt="Qualitative result 2">
+            </figure>
+            <div style="text-align: center; margin-top: -5px;">stability score: 0.78</div>
+          </div>
+          <div class="flex-item-small">
+            <figure>
+              <img class="centered img-fluid" width="100%" src="image/unstable/4.png" alt="Qualitative result 3">
+            </figure>
+            <div style="text-align: center; margin-top: -5px;">stability score: 0.03</div>
+          </div>
+        </div>
+      </div>
+
 
     <hr>
     <h2>
@@ -920,13 +1045,14 @@ pre {
     </h2>
     <div>
         With our generated scene, we implement a manipulation task generation pipeline to generate diverse manipulation tasks and trajectories, which are used to train the manipulation policy mentioned in the paper.
+        Videos are shown at 2x speed for better visualization.
     </div>
 
     <div class="flex-row">
-        <div class="flex-container">
+        <div class="flex-container" id="manipulation-videos">
           <div class="flex-item">
             <figure>
-              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+              <video class="centered manipulation-video" width="100%" controls playsinline autoplay muted loop class="video-background">
                 <source src="video/manipulation_compressed/1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -934,7 +1060,7 @@ pre {
           </div>
           <div class="flex-item">
             <figure>
-              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+              <video class="centered manipulation-video" width="100%" controls playsinline autoplay muted loop class="video-background">
                 <source src="video/manipulation_compressed/2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -942,7 +1068,7 @@ pre {
           </div>
           <div class="flex-item">
             <figure>
-              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+              <video class="centered manipulation-video" width="100%" controls playsinline autoplay muted loop class="video-background">
                 <source src="video/manipulation_compressed/3.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -950,7 +1076,7 @@ pre {
           </div>
           <div class="flex-item">
             <figure>
-              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+              <video class="centered manipulation-video" width="100%" controls playsinline autoplay muted loop class="video-background">
                 <source src="video/manipulation_compressed/4.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -958,7 +1084,7 @@ pre {
           </div>
           <div class="flex-item">
             <figure>
-              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+              <video class="centered manipulation-video" width="100%" controls playsinline autoplay muted loop class="video-background">
                 <source src="video/manipulation_compressed/5.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -966,7 +1092,7 @@ pre {
           </div>
           <div class="flex-item">
             <figure>
-              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+              <video class="centered manipulation-video" width="100%" controls playsinline autoplay muted loop class="video-background">
                 <source src="video/manipulation_compressed/6.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -974,7 +1100,7 @@ pre {
           </div>
             <div class="flex-item">
             <figure>
-              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+              <video class="centered manipulation-video" width="100%" controls playsinline autoplay muted loop class="video-background">
                 <source src="video/manipulation_compressed/7.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -982,7 +1108,7 @@ pre {
           </div>
             <div class="flex-item">
             <figure>
-              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+              <video class="centered manipulation-video" width="100%" controls playsinline autoplay muted loop class="video-background">
                 <source src="video/manipulation_compressed/8.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -990,7 +1116,7 @@ pre {
           </div>
             <div class="flex-item">
             <figure>
-              <video class="centered" width="100%" controls playsinline autoplay muted loop class="video-background">
+              <video class="centered manipulation-video" width="100%" controls playsinline autoplay muted loop class="video-background">
                 <source src="video/manipulation_compressed/9.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -998,6 +1124,22 @@ pre {
           </div>
         </div>
       </div>
+
+<script>
+// Set playback rate to 2x for manipulation videos
+document.addEventListener('DOMContentLoaded', function() {
+    const manipulationVideos = document.querySelectorAll('.manipulation-video');
+    manipulationVideos.forEach(function(video) {
+        video.addEventListener('loadedmetadata', function() {
+            this.playbackRate = 2.0;
+        });
+        // Also set it immediately in case the video is already loaded
+        if (video.readyState >= 1) {
+            video.playbackRate = 2.0;
+        }
+    });
+});
+</script>
 
 <hr>
 
